@@ -9,7 +9,6 @@
 	tickCount = 0;
 	stateCount = 0;
 	nekoState = theState;
-	[self flushWindow];
 }
 
 - (id)initWithContentRect:(NSRect)contentRect styleMask:(NSWindowStyleMask)styleMask backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation
@@ -24,7 +23,6 @@
 	[self setFrame:NSMakeRect(0.0f, 0.0f, 32.0f, 32.0f) display:0];
 	[self center];
 	[self setBackgroundColor:[NSColor clearColor]];
-	[self useOptimizedDrawing:YES];
 	NSBundle *bundle = [NSBundle mainBundle];
 	
 	stop = [NSArray arrayWithObjects:
